@@ -1,0 +1,17 @@
+{{template "base" .}}
+
+
+{{define "content"}}
+<div class="container">
+    <h1>Successfully Loaded Template</h1>
+    <h3>Oh! God my name is {{index .StringMap "name"}}</h3>
+    <p>
+        {{if ne (index .StringMap "ip") ""}}
+            Your Ip addr is:{{index .StringMap "ip"}}
+        {{else}}
+            Sorry i dont know your ip please reload the page..
+        {{end}}
+
+    </p>
+</div>
+{{end}}
